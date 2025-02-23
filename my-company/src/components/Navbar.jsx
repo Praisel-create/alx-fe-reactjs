@@ -1,18 +1,28 @@
-import { Link } from "react-router-dom";
-import React from 'react'
+import { BrowserRouter as Link } from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <nav style={StyleSheet.navbar}>
-        <ul style={StyleSheet.navList}>
-            <li style={style.navItem}><Link to="/" style={styles.navLink}>Home</Link></li>
-            <li style={style.navItem}><Link to="/" style={styles.navLink}>About</Link></li>
-            <li style={style.navItem}><Link to="/" style={styles.navLink}>Services</Link></li>
-            <li style={style.navItem}><Link to="/" style={styles.navLink}>Contact</Link></li>
-        </ul>
-
+    <nav
+      style={{
+        backgroundColor: "green",
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/services">Services</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
     </nav>
-  )
+  );
 }
-
-export default Navbar
