@@ -1,40 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
-import useRecipeStore from './recipeStore';
-import EditRecipeForm from './EditRecipeForm';
-import DeleteRecipeButton from './DeleteRecipeButton';
+import { useRecipeStore } from '../recipeStore';
 
 const RecipeDetails = () => {
-  const { recipeId } = useParams(); // Get recipeId from the URL
+  const { id } = useParams();
   const recipe = useRecipeStore((state) =>
-    state.recipes.find((recipe) => recipe.id === Number(recipeId))
+    state.recipes.find((recipe) => recipe.id === parseInt(id))
   );
-  const [isEditing, setIsEditing] = useState(false);
 
   if (!recipe) {
-    return <div>Recipe not found!</div>;
+    return <p>Recipe not found.</p>;
   }
-
-  const handleDelete = () => {
-    alert('Recipe deleted!');
-    // You can redirect the user or perform other actions after deletion
-  };
 
   return (
     <div>
-      {isEditing ? (
-        <EditRecipeForm
-          recipe={recipe}
-          onClose={() => setIsEditing(false)}
-        />
-      ) : (
-        <>
-          <h1>{recipe.title}</h1>
-          <p>{recipe.description}</p>
-          <button onClick={() => setIsEditing(true)}>Edit Recipe</button>
-          <DeleteRecipeButton recipeId={recipe.id} onDelete={handleDelete} />
-        </>
-      )}
+      <h1>{recipe.title}</h1>
+      <p>{recipe.description}</p>
     </div>
   );
 };
