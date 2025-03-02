@@ -30,3 +30,5 @@ import { useState } from 'react';
       </form>
     );
   };
+
+  export default AddRecipeForm;
