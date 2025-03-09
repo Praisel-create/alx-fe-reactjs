@@ -1,63 +1,81 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from 'yup';
-
-const FormikForm = () => {
-        
-}
+import React, { useState } from "react";
 
 const RegistrationForm = () => {
-    const [formData, setFormData] = useState({
-        username: "",
-        email: "",
-        password: "",
-    });
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
-    const handleChange = (e) => {
-        setFormData({
-            ...formData, [e.target.name]:e.target.value,
-        });
-    };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Form Submitted:", formData);
-    };
+    if (name === "username") {
+      setUsername(value);
+    } else if (name === "email") {
+      setEmail(value);
+    } else if (name === "password") {
+      setPassword(value);
+    }
+  };
 
-    return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <input 
-                type="text"
-                name="username"
-                value={formData.username}
-                onChange={handleChange}
-                placeholder="Username"
-                />
-            </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-            <div>
-                <input 
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email"
-                />
-            </div>
+    const newErrors = {};
+    if (!username) newErrors.username = "Username is required";
+    if (!email) newErrors.email = "Email is required";
+    if (!password) newErrors.password = "Password is required";
 
-            <div>
-                <input 
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                placeholder="Password"
-                />
-            </div>
+    setErrors(newErrors);
 
-            <button type="submit">Register</button>
-        </form>
-    );
+    if (Object.keys(newErrors).length > 0) {
+      return;
+    }
+
+    console.log("Form submitted:", { username, email, password });
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          value={username}
+          onChange={handleChange}
+        />
+        {errors.username && <p style={{ color: "red" }}>{errors.username}</p>}
+      </div>
+
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
+        {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+      </div>
+
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
+        {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  );
 };
 
 export default RegistrationForm;
