@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "Spaghetti Carbonara",
+      "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+      "image": "https://www.spendwithpennies.com/wp-content/uploads/2023/04/1200-Spaghetti-Carbonara-2-SpendWithPennies.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Chicken Tikka Masala",
+      "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
+      "image": "https://bellyfull.net/wp-content/uploads/2021/05/Chicken-Tikka-Masala-blog.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Jollof Rice",
+        "summary": "A West African dish of rice cooked in a tomtato based sauce, served with fried ripe plantains and a protein of choice.",
+        "image": "https://zenaskitchen.com/wp-content/uploads/2022/12/jollof-rice.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Nigerian Egg Sauce",
+        "summary": "A saucy egg and tomato scramble often served with rice or fried or boiled yams, potatoes or plantains ",
+        "image": "https://allnigerianfoods.com/wp-content/uploads/egg-sauce.png"
+    }
+  ]
