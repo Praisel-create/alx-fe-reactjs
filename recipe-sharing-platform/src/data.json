@@ -3,24 +3,126 @@
       "id": 1,
       "title": "Spaghetti Carbonara",
       "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-      "image": "https://www.spendwithpennies.com/wp-content/uploads/2023/04/1200-Spaghetti-Carbonara-2-SpendWithPennies.jpg"
+      "image": "https://www.spendwithpennies.com/wp-content/uploads/2023/04/1200-Spaghetti-Carbonara-2-SpendWithPennies.jpg",
+      "ingredients": [
+        "200g spaghetti",
+        "100g bacon, diced",
+        "2 large eggs",
+        "50g Parmesan cheese, grated",
+        "1 tbsp olive oil",
+        "2 cloves garlic, minced (optional)",
+        "Salt & black pepper to taste"
+      ],
+      "instructions": [
+        "Cook the spaghetti in salted boiling water until al dente. Reserve ½ cup of pasta water before draining",
+        "Prepare the sauce: In a bowl, whisk together eggs, Parmesan, and black pepper.",
+        "Cook the pancetta: Heat olive oil in a pan, fry pancetta (or bacon) until crispy. Add garlic for extra flavor, then remove from heat.",
+        "Combine everything: Toss hot spaghetti into the pan with pancetta. Remove from heat and quickly mix in the egg mixture, stirring fast so the heat thickens the sauce without scrambling the eggs.",
+        "Adjust consistency: Add reserved pasta water gradually if needed for a creamy sauce.",
+        "Serve hot, topped with extra Parmesan and black pepper."
+    ]
     },
+
+
     {
       "id": 2,
       "title": "Chicken Tikka Masala",
       "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-      "image": "https://bellyfull.net/wp-content/uploads/2021/05/Chicken-Tikka-Masala-blog.jpg"
+      "image": "https://bellyfull.net/wp-content/uploads/2021/05/Chicken-Tikka-Masala-blog.jpg",
+      "ingredients":[
+        "For the chicken marinade:",
+          "500g chicken breast or thighs, cut into chunks",
+          "½ cup plain yogurt",
+          "1 tbsp lemon juice",
+          "2 tsp garam masala",
+          "1 tsp turmeric",
+          "1 tsp cumin",
+          "1 tsp paprika",
+          "½ tsp salt",
+          "2 cloves garlic, minced",
+          "1 tsp grated ginger",
+
+          "For the sauce:",
+          "2 tbsp butter or oil",
+          "1 onion, finely chopped",
+          "2 cloves garlic, minced",
+          "1 tsp grated ginger",
+          "1 tsp cumin",
+          "1 tsp paprika",
+          "1 tsp garam masala",
+          "1 tsp coriander",
+          "1 can (400g) crushed tomatoes",
+          "½ cup heavy cream (or coconut milk)",
+          "Salt to taste",
+          "Fresh cilantro for garnish"
+      ],
+      "instructions": [
+        "Marinate the chicken: Mix all marinade ingredients and coat chicken.",
+        "Let sit for at least 30 minutes (or overnight for best results).",
+        "Grill or cook chicken: Sear the marinated chicken in a hot pan or bake at 200°C (400°F) for 15-20 minutes. Set aside.",
+        "Make the sauce: In a pan, heat butter/oil, sauté onions until soft. Add garlic, ginger, and spices, cooking until fragrant.",
+        "Add tomatoes & simmer: Pour in crushed tomatoes, simmer for 10 minutes. Blend for a smoother texture (optional).",
+        "Finish with cream: Stir in cream, add the grilled chicken, and simmer for another 5 minutes.",
+        "Serve hot with rice or naan, garnished with fresh cilantro."
+      ]
     },
+
+
     {
         "id": 3,
         "title": "Jollof Rice",
-        "summary": "A West African dish of rice cooked in a tomtato based sauce, served with fried ripe plantains and a protein of choice.",
-        "image": "https://zenaskitchen.com/wp-content/uploads/2022/12/jollof-rice.jpg"
+        "summary": "A West African dish of rice cooked in a tomato based sauce, served with fried ripe plantains and a protein of choice.",
+        "image": "https://zenaskitchen.com/wp-content/uploads/2022/12/jollof-rice.jpg",
+        "ingredients":[
+          "2 cups long-grain parboiled rice",
+          "3 large tomatoes, blended",
+          "1 red bell pepper, blended",
+          "1 small onion, blended",
+          "1 scotch bonnet pepper, blended",
+          "2 tbsp tomato paste",
+          "2 tbsp vegetable oil",
+          "1 onion, chopped",
+          "2 cloves garlic, minced",
+          "1 tsp thyme",
+          "1 tsp curry powder",
+          "1 tsp paprika",
+          "1 seasoning cube",
+          "2 cups chicken broth (or water)",
+          "1 bay leaf",
+          "Salt to taste"
+      ],
+      "instructions": [
+        "Parboil the rice: Wash and partially cook the rice. Drain and set aside.",
+        "Make the tomato sauce: Heat oil, sauté chopped onions until soft. Add garlic, tomato paste, and blended tomato mixture. Cook for 10-15 minutes until thickened.",
+        "Add seasonings & broth: Stir in thyme, curry, paprika, seasoning cube, and bay leaf. Pour in broth/water.",
+        "Cook the rice: Add parboiled rice, stir well, cover with foil and a lid. Cook on low heat for 20-30 minutes, stirring occasionally.",
+        "Fluff and serve: Once rice is cooked and absorbed the sauce, remove bay leaf, fluff with a fork, and serve with fried plantains or grilled chicken."
+      ]
     },
+
+
     {
         "id": 4,
         "title": "Nigerian Egg Sauce",
         "summary": "A saucy egg and tomato scramble often served with rice or fried or boiled yams, potatoes or plantains ",
-        "image": "https://allnigerianfoods.com/wp-content/uploads/egg-sauce.png"
+        "image": "https://allnigerianfoods.com/wp-content/uploads/egg-sauce.png",
+        "ingredients":[
+          "4 eggs",
+          "2 tbsp vegetable oil",
+          "2 large tomatoes, chopped",
+          "1 small onion, chopped",
+          "1 scotch bonnet pepper, chopped",
+          "1 small bell pepper, chopped (optional)",
+          "1 seasoning cube",
+          "½ tsp thyme",
+          "½ tsp salt",
+          "½ tsp black pepper"
+      ],
+      "instructions": [
+        "Beat the eggs: In a bowl, whisk the eggs with a pinch of salt.",
+        "Sauté veggies: Heat oil in a pan, fry onions until translucent. Add tomatoes, pepper, and seasoning. Cook for 5-7 minutes until slightly thickened.",
+        "Cook the eggs: Reduce heat, pour in beaten eggs. Let sit for a few seconds, then scramble gently until fully cooked.",
+        "Serve hot with boiled yam, plantains, or bread."
+      ]
     }
   ]
