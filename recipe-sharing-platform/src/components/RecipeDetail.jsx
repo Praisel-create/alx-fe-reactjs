@@ -23,13 +23,13 @@ const RecipeDetail = () => {
         <div>
             <h1>{recipe.title}</h1>
             <img src={recipe.image} alt={recipe.title} className="h-[200px] w-[200px] hover:shadow-lg" />
-            <h2 className="font-bold line leading-loose">Ingredients</h2>
+            <h2 className="sm:text-sm md:text-l lg:text-xl font-bold line leading-loose">Ingredients</h2>
             <ul className="list-disc list-inside leading-loose">
                 {recipe.ingredients.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
                 ))}
             </ul>
-            <h2 className="font-bold leading-loose">Instructions</h2>
+            <h2 className="sm:text-sm md:text-l lg:text-xl font-bold leading-loose">Instructions</h2>
             <ol className="list-disc list-inside leading-loose">
                 {recipe.instructions.map((step, index) => (
                     <li key={index}>{step}</li>
