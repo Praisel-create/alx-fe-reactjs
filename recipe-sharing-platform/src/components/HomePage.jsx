@@ -27,11 +27,15 @@ const HomePage = () => {
                                 {item.title}
                             </h2>
                         </Link>
-                        
                         <p className="text-gray-600 mt-1">{item.summary}</p>
                     </div>
                 ))}
             </div>
+
+            <Link to={"/add-recipe"}>
+            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                Add New Recipe</button>
+            </Link>
         </div>
     );
 }

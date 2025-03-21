@@ -124,5 +124,77 @@
         "Cook the eggs: Reduce heat, pour in beaten eggs. Let sit for a few seconds, then scramble gently until fully cooked.",
         "Serve hot with boiled yam, plantains, or bread."
       ]
+    },
+
+
+    {
+      "id": 5,
+      "title": "Nigerian Banga Soup",
+      "summary": "A rich and aromatic palm nut soup enjoyed with starch, eba, or pounded yam.",
+      "image": "https://bourbono.com/wp-content/uploads/2022/11/banga-soup-and-starch-540x720-1.jpeg",
+      "ingredients": [
+        "4 cups palm fruit extract (or canned palm nut concentrate)",
+        "500g assorted meats (beef, goat meat, cow tripe, etc.)",
+        "2 medium-sized dried fish or smoked fish",
+        "2 tablespoons ground crayfish",
+        "1 medium onion, chopped",
+        "2 tablespoons ground banga spice mix",
+        "1 teaspoon dried bitter leaves or scent leaves (optional)",
+        "2 seasoning cubes",
+        "2 tablespoons ground pepper (cayenne or chili)",
+        "1 teaspoon salt (adjust to taste)",
+        "2 tablespoons periwinkle (optional)",
+        "1 cup fresh prawns (optional)",
+        "1 teaspoon ground uziza seeds (optional)"
+      ],
+      "instructions": [
+        "Season and boil assorted meats with salt, seasoning cubes, and onions until tender. Keep the stock.",
+        "If using fresh palm nuts, boil, pound, and extract the oil; or dilute canned palm nut concentrate with water.",
+        "Pour palm nut extract into a pot and bring to a boil. Let it thicken for 15 minutes.",
+        "Add meat stock, crayfish, pepper, banga spice mix, and seasoning cubes. Stir and cook for 10 minutes.",
+        "Add meats, dried fish, periwinkle, and fresh prawns. Simmer for another 10-15 minutes.",
+        "Add dried bitter leaves or scent leaves, stir, and taste for seasoning. Adjust as needed.",
+        "Cook for 5 more minutes and serve hot with starch, eba, or pounded yam.",
+        "To prepare starch: In a pot, mix 1 cup of starch (cassava flour) with 1.5 cups of water until smooth.",
+        "Place on medium heat and stir continuously with a wooden spatula until it thickens and turns yellow.",
+        "Once it becomes stretchy and smooth, remove from heat and serve alongside Banga Soup."
+      ]
+    },
+
+
+    {
+      "id": 6,
+      "title": "Turkey Stir-Fry",
+      "summary": "A quick and delicious stir-fried turkey dish with vibrant vegetables and a savory sauce.",
+      "image": "https://healthyrecipesblogs.com/wp-content/uploads/2022/06/turkey-stir-fry-2-2022-768x1152.jpg",
+      "ingredients": [
+        "500g turkey breast or thighs, cut into thin strips",
+        "2 tablespoons soy sauce",
+        "1 tablespoon cornstarch",
+        "1 teaspoon black pepper",
+        "1 teaspoon garlic powder",
+        "2 tablespoons vegetable oil",
+        "1 onion, sliced",
+        "2 cloves garlic, minced",
+        "1 bell pepper (red, green, or yellow), sliced",
+        "1 carrot, julienned",
+        "1 zucchini, sliced",
+        "1 teaspoon ginger, grated",
+        "1 tablespoon oyster sauce",
+        "1 tablespoon soy sauce",
+        "1 teaspoon honey or brown sugar",
+        "½ teaspoon chili flakes (optional)",
+        "Salt to taste",
+        "Spring onions for garnish"
+      ],
+      "instructions": [
+        "In a bowl, mix turkey strips with soy sauce, cornstarch, black pepper, and garlic powder. Let marinate for 15 minutes.",
+        "Heat oil in a pan over medium-high heat and stir-fry turkey until golden brown. Remove and set aside.",
+        "In the same pan, sauté onions, garlic, and ginger for 1-2 minutes until fragrant.",
+        "Add bell peppers, carrots, and zucchini. Stir-fry for 3 minutes until slightly tender.",
+        "Mix oyster sauce, soy sauce, honey, and chili flakes in a small bowl. Pour into the pan and stir well.",
+        "Return turkey to the pan and mix well to coat with the sauce. Stir-fry for another 2 minutes.",
+        "Garnish with spring onions and serve hot with steamed rice or noodles."
+      ]
     }
   ]
