@@ -6,7 +6,7 @@ function AddRecipeForm() {
   const [recipe, setRecipe] = useState({
     title: "",
     ingredients: "",
-    instructions: "",
+    steps: "",
     image: "",
   });
 
@@ -18,7 +18,7 @@ function AddRecipeForm() {
     e.preventDefault();
 
     // Simple Validation: Ensure fields are not empty
-    if (!recipe.title || !recipe.ingredients || !recipe.instructions || !recipe.image) {
+    if (!recipe.title || !recipe.ingredients || !recipe.steps || !recipe.image) {
       alert("All fields are required!");
       return;
     }
@@ -30,7 +30,7 @@ function AddRecipeForm() {
       title: recipe.title,
       image: recipe.image, // URL input
       ingredients: recipe.ingredients.split("\n"), // Convert to array
-      instructions: recipe.instructions.split("\n"), // Convert to array
+      instructions: recipe.steps.split("\n"), // Convert to array
     };
 
     storedRecipes.push(newRecipe);
@@ -72,7 +72,7 @@ function AddRecipeForm() {
           {/* Instructions */}
           <div>
             <label className="block text-gray-700 font-semibold">Preparation Steps (One per line):</label>
-            <textarea name="instructions" value={recipe.instructions} onChange={handleChange} required
+            <textarea name="instructions" value={recipe.steps} onChange={handleChange} required
               rows="5" placeholder="1. Preheat oven to 180°C&#10;2. Mix ingredients&#10;3. Bake for 20 minutes"
               className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
           </div>
