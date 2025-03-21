@@ -1,14 +1,32 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function AddRecipeForm() {
+function AddRecipe() {
   const navigate = useNavigate();
   const [recipe, setRecipe] = useState({
     title: "",
     ingredients: "",
-    steps: "",
+    instructions: "",
     image: "",
   });
+
+  const [errors, setErrors] = useState({}); // Stores validation errors
+
+  // Validation function
+  const validate = () => {
+    let newErrors = {};
+
+    if (!recipe.title.trim()) newErrors.title = "Recipe title is required.";
+    if (!recipe.ingredients.trim()) newErrors.ingredients = "Ingredients cannot be empty.";
+    if (!recipe.instructions.trim()) newErrors.instructions = "Preparation steps are required.";
+    if (!recipe.image.trim()) newErrors.image = "Image URL is required.";
+    else if (!/^https?:\/\/.*\.(jpg|jpeg|png|gif)$/i.test(recipe.image)) {
+      newErrors.image = "Enter a valid image URL (jpg, jpeg, png, gif).";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
+  };
 
   const handleChange = (e) => {
     setRecipe({ ...recipe, [e.target.name]: e.target.value });
@@ -16,28 +34,23 @@ function AddRecipeForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Simple Validation: Ensure fields are not empty
-    if (!recipe.title || !recipe.ingredients || !recipe.steps || !recipe.image) {
-      alert("All fields are required!");
-      return;
-    }
+    if (!validate()) return; // Stop submission if validation fails
 
     let storedRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
-    
+
     const newRecipe = {
-      id: storedRecipes.length + 1, // Generate unique ID
+      id: storedRecipes.length + 1,
       title: recipe.title,
-      image: recipe.image, // URL input
+      image: recipe.image,
       ingredients: recipe.ingredients.split("\n"), // Convert to array
-      instructions: recipe.steps.split("\n"), // Convert to array
+      instructions: recipe.instructions.split("\n"), // Convert to array
     };
 
     storedRecipes.push(newRecipe);
     localStorage.setItem("recipes", JSON.stringify(storedRecipes));
 
     alert("Recipe added successfully!");
-    navigate("/"); // Redirect to home page
+    navigate("/"); // Redirect to homepage
   };
 
   return (
@@ -49,32 +62,36 @@ function AddRecipeForm() {
           {/* Recipe Title */}
           <div>
             <label className="block text-gray-700 font-semibold">Recipe Title:</label>
-            <input type="text" name="title" value={recipe.title} onChange={handleChange} required
-              className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <input type="text" name="title" value={recipe.title} onChange={handleChange}
+              className={`w-full border p-2 rounded focus:outline-none ${errors.title ? "border-red-500" : "border-gray-300"}`} />
+            {errors.title && <p className="text-red-500 text-sm mt-1">{errors.title}</p>}
           </div>
 
           {/* Image URL */}
           <div>
             <label className="block text-gray-700 font-semibold">Image URL:</label>
-            <input type="url" name="image" value={recipe.image} onChange={handleChange} required
+            <input type="url" name="image" value={recipe.image} onChange={handleChange}
               placeholder="https://example.com/recipe.jpg"
-              className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              className={`w-full border p-2 rounded focus:outline-none ${errors.image ? "border-red-500" : "border-gray-300"}`} />
+            {errors.image && <p className="text-red-500 text-sm mt-1">{errors.image}</p>}
           </div>
 
           {/* Ingredients */}
           <div>
             <label className="block text-gray-700 font-semibold">Ingredients (One per line):</label>
-            <textarea name="ingredients" value={recipe.ingredients} onChange={handleChange} required
+            <textarea name="ingredients" value={recipe.ingredients} onChange={handleChange}
               rows="4" placeholder="1 cup flour&#10;2 eggs&#10;1 tsp sugar"
-              className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              className={`w-full border p-2 rounded focus:outline-none ${errors.ingredients ? "border-red-500" : "border-gray-300"}`}></textarea>
+            {errors.ingredients && <p className="text-red-500 text-sm mt-1">{errors.ingredients}</p>}
           </div>
 
           {/* Instructions */}
           <div>
             <label className="block text-gray-700 font-semibold">Preparation Steps (One per line):</label>
-            <textarea name="instructions" value={recipe.steps} onChange={handleChange} required
+            <textarea name="instructions" value={recipe.instructions} onChange={handleChange}
               rows="5" placeholder="1. Preheat oven to 180°C&#10;2. Mix ingredients&#10;3. Bake for 20 minutes"
-              className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+              className={`w-full border p-2 rounded focus:outline-none ${errors.instructions ? "border-red-500" : "border-gray-300"}`}></textarea>
+            {errors.instructions && <p className="text-red-500 text-sm mt-1">{errors.instructions}</p>}
           </div>
 
           {/* Submit Button */}
@@ -87,4 +104,4 @@ function AddRecipeForm() {
   );
 }
 
-export default AddRecipeForm;
+export default AddRecipe;
