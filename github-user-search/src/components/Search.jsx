@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { fetchUsers } from "../services/githubService";
+import { fetchUsers as fetchUserData } from "../services/githubService";
 
 const Search = () => {
   const [username, setUsername] = useState("");
@@ -18,7 +18,7 @@ const Search = () => {
     setUsers([]);
 
     try {
-      const data = await fetchUsers(username, location, minRepos, 1);
+      const data = await fetchUserData(username, location, minRepos, 1);
       setUsers(data.items);
       setTotalResults(data.total_count);
       setPage(1);
@@ -34,7 +34,7 @@ const Search = () => {
     setLoading(true);
 
     try {
-      const data = await fetchUsers(username, location, minRepos, nextPage);
+      const data = await fetchUserData(username, location, minRepos, nextPage);
       setUsers([...users, ...data.items]);
       setPage(nextPage);
     } catch (err) {
