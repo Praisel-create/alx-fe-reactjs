@@ -3,6 +3,7 @@ import Search from "./components/Search";
 
 function App() {
   return (
+    
     <Router>
       <div className="min-h-screen bg-gray-100 text-gray-900">
         <nav className="bg-blue-600 p-4">
