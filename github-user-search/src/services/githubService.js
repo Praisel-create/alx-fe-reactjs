@@ -1,14 +1,16 @@
-const GITHUB_API_KEY = import.meta.env.VITE_APP_GITHUB_API_KEY;
-
 import axios from "axios";
 
-const BASE_URL = "https://api.github.com/users/";
+const BASE_URL = "https://api.github.com/search/users";
 
-export const fetchUserData = async (username) => {
+export const fetchUsers = async (username, location, minRepos, page = 1) => {
   try {
-    const response = await axios.get(`${BASE_URL}${username}`);
+    let query = `q=${username}`;
+    if (location) query += `+location:${location}`;
+    if (minRepos) query += `+repos:>${minRepos}`;
+
+    const response = await axios.get(`${BASE_URL}?${query}&per_page=10&page=${page}`);
     return response.data;
   } catch (error) {
-    throw new Error("User not found");
+    throw new Error("Something went wrong. Please try again.");
   }
 };
