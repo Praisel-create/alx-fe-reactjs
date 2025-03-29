@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import UserSearch from "./components/UserSearch";
-import UserProfile from "./components/UserProfile";
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-100 text-gray-900">
+        {/* Navigation Bar */}
         <nav className="bg-blue-600 p-4">
           <ul className="flex space-x-4">
             <li>
@@ -14,10 +14,10 @@ function App() {
           </ul>
         </nav>
 
+        {/* Page Content */}
         <div className="p-4">
           <Routes>
             <Route path="/" element={<UserSearch />} />
-            <Route path="/profile/:username" element={<UserProfile />} />
           </Routes>
         </div>
       </div>
